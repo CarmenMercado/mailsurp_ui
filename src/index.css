@@ -11,4 +11,8 @@
     .input-styles{
        @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
     }
+    .button-style{
+        @apply  font-bold py-2 px-4 rounded focus:outline-none text-white;
+        background: #8207e3;
+    }
 }
