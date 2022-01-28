@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.25.0",
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
+    "jest": "^27.4.7",
     "tailwindcss": "^3.0.15",
     "vite": "^2.7.2"
   }
