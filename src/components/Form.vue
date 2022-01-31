@@ -4,7 +4,9 @@
       <form class="w-full shadow-inner border-solid border-2 rounded px-8 pt-6 pb-8 mb-4"
             v-on:submit.prevent="send_email"
       >
-        <div role="alert" v-show="success">
+        <div role="alert"
+             v-show="success"
+        >
           <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2">
             Success
           </div>
@@ -13,7 +15,9 @@
           </div>
         </div>
 
-        <div role="alert" v-show="error">
+        <div role="alert"
+             v-show="error"
+        >
           <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
             Error
           </div>
@@ -58,7 +62,8 @@
 </template>
 
 <script>
-import  axios from 'axios'
+import {utils} from "../assets/js/utils";
+import  axios from 'axios';
 export default {
   name: 'Form',
   data () {
@@ -74,7 +79,7 @@ export default {
   },
   methods:{
     send_email () {
-      if(this.validate()===false){
+      if(utils(this.form)===false){
         return;
       }
       const params = new FormData()
@@ -88,12 +93,6 @@ export default {
         this.error=true;
         this.clean();
       })
-    },
-    validate(){
-      if(this.form.body === null && this.form.email === null && this.form.subject === null ){
-        return false;
-      }
-      return true;
     },
     clean(){
       this.form.email="";
