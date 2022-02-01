@@ -1,7 +1,7 @@
-const utils = require('./../src/assets/js/utils')
+import {utils} from "../src/assets/js/utils";
 
 test('validate empty all files', () => {
-    form ={
+    const form ={
         email:null,
         subject:null,
         body:null
@@ -10,7 +10,7 @@ test('validate empty all files', () => {
 });
 
 test('validate empty one file', () => {
-    form ={
+    const form ={
         email:'some@test.com',
         subject:'test',
         body:null
@@ -19,7 +19,7 @@ test('validate empty one file', () => {
 });
 
 test('validate empty two file', () => {
-    form ={
+    const form ={
         email:'some@test.com',
         subject:null,
         body:null
@@ -28,7 +28,7 @@ test('validate empty two file', () => {
 });
 
 test('All values', () => {
-    form ={
+    const form ={
         email:'some@test.com',
         subject:'test',
         body:"some text"
